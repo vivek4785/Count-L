@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Count L Letters</title>
+    <style>
+        body {
+            font-family: Calibri, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        label {
+            font-size: 18px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        p {
+            font-size: 20px;
+            margin: 20px 0;
+        }
+    </style>
+    <script>
+        function countLetters() {
+            var inputText = document.getElementById("inputText").value;
+            var count = 0;
+            for (var i = 0; i < inputText.length; i++) {
+                if (inputText[i].toLowerCase() === "l") {
+                    count++;
+                }
+            }
+            var result = inputText + " contains " + count + "x L characters";
+            document.getElementById("output").textContent = result;
+        }
+    </script>
+</head>
+<body>
+    <h1>Count L Letters</h1>
+    <label for="inputText">Enter a word or phrase:</label>
+    <input type="text" id="inputText">
+    <br>
+    <button onclick="countLetters()">Count</button>
+    <p id="output"></p>
+</body>
+</html>
